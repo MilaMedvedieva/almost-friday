@@ -1,0 +1,156 @@
+.page-template-tp-about {
+  
+  .info {
+	background: #ffffff;
+	padding: 1rem 0;
+	display: flex;
+	align-items: center;
+	min-height: auto;
+	
+	.wrapper {
+	  padding: 0 1rem;
+	  max-width: 1520px;
+	  width: 100%;
+	  margin: 0 auto;
+	  
+	  @include media(xl) {
+		flex-wrap: wrap;
+		@include flex(row-reverse, center, center);
+	  }
+	  
+	  .image {
+		position: relative;
+		height: 200px;
+		
+		@include media(sm) {
+		  height: 300px;
+		}
+		
+		@include media(md) {
+		  height: 350px;
+		}
+		
+		@include media(lg) {
+		  height: 400px;
+		}
+		
+		@include media(xl) {
+		  width: 50%;
+		}
+	 
+		@include media(hd) {
+		  height: 450px;
+		}
+	  }
+	  
+	  .content {
+		@include media(xl) {
+		  width: 40%;
+		  padding-right: 2rem;
+		}
+		
+		.section-title {
+		  color: $c_dark;
+		  text-align: left;
+		  padding-bottom: 1rem;
+		  margin: 1rem 0;
+		  position: relative;
+		  
+		  @include media(xl) {
+			padding-bottom: 2rem;
+			margin: 2rem 0;
+		  }
+		  
+		  @include media(hd) {
+			max-width: 30rem;
+		  }
+		  
+		  &:after {
+			content: '';
+			width: 80px;
+			height: 1px;
+			background: $c_dark;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		  }
+		}
+		
+		.section-description {
+		  margin: 1rem 0;
+		  
+		  @include media(hd) {
+			max-width: 30rem;
+		  }
+		  
+		  p {
+			margin: 1rem 0;
+			text-align: justify;
+			letter-spacing: 0.005em;
+			font-size: 1.125rem;
+		  }
+		  
+		  ul {
+			li {
+			  padding-left: 20px;
+			  position: relative;
+			  margin: .5rem 0;
+			  
+			  &:after {
+				content: "";
+				width: 10px;
+				height: 5px;
+				position: absolute;
+				left: 0;
+				top: 5px;
+				border-bottom: 2px solid #e65358;
+				border-left: 2px solid #e65358;
+				transform: rotate(-45deg);
+			  }
+			}
+		  }
+		}
+		
+		.social {
+		  margin: 2rem 0;
+		  max-width: 170px;
+		  
+		  
+		  p {
+			letter-spacing: 0.5em;
+			text-transform: uppercase;
+		  }
+		  
+		  ul {
+			width: 100%;
+			margin: 1rem auto;
+			max-width: 170px;
+			@include flex(row, center, flex-start);
+			
+			li {
+			  margin: 0.5rem;
+			  
+			  a {
+				svg {
+				  path {
+					fill: #000000;
+				  }
+				}
+				
+				@include media(xl) {
+				  &:hover {
+					svg {
+					  path {
+						fill: $c_red;
+					  }
+					}
+				  }
+				}
+			  }
+			}
+		  }
+		}
+	  }
+	}
+  }
+}

@@ -1,0 +1,38 @@
+.page-template-tp-registration {
+
+  .types_of_events-wrap {
+    max-width: 1394px;
+    margin: 2rem auto;
+    border-radius: 10px;
+    padding: 2rem 1rem;
+
+    .list {
+      list-style: none;
+      flex-wrap: wrap;
+      @include flex(row, center, center);
+
+      li {
+
+        a {
+          display: flex;
+          align-items: center;
+          padding: 1rem 3rem;
+          margin: 2rem;
+          border: 1px solid #EAEAEA;
+          box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.08);
+          border-radius: 4px;
+          min-height: 75px;
+          color: rgba(17, 36, 55, 0.6);
+
+          &:hover {
+            color: $c_dark;
+          }
+
+          span {
+            margin-right: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}

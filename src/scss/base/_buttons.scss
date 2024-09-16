@@ -1,0 +1,22 @@
+.button {
+  font-family: $f_stolzl_bold;
+  font-size: 1rem;
+  text-transform: capitalize;
+  color: #FFFFFF;
+  border: 1px solid $c_red;
+  width: 100%;
+  max-width: 250px;
+  transition: 1s;
+  background: $c_red;
+  padding: 1.5rem;
+  @include flex(row, center, center);
+  
+  &:hover {
+    background-color: transparent;
+    color: $c_red;
+    box-shadow: 0 10px 18px 0 rgb(0 0 0 / 10%);
+  }
+  
+}
+
+

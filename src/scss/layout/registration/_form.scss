@@ -1,0 +1,41 @@
+.page-template-tp-registration {
+  
+  .form-wrap {
+	max-width: 670px;
+	margin: 0 auto;
+	
+	input,
+	textarea {
+	  border: none;
+	  border-bottom: 1px solid #D2D2D2;
+	  width: 100%;
+	  padding: 1rem 0;
+	  margin: 1rem 0;
+	  
+	  &::placeholder {
+		font-family: $f_stolzl_regular;
+		color: rgba(17, 36, 55, 0.6);
+		line-height: 1.5;
+		font-size: 1rem;
+	  }
+	}
+	
+	textarea {
+	  height: 45px;
+	}
+	
+	.checkbox {
+	  font-family: $f_stolzl_regular;
+	  color: rgba(17, 36, 55, 0.6);
+	  line-height: 1.5;
+	  font-size: 1rem;
+	  
+	  @include flex(row, center, flex-start);
+	  
+	  input {
+		width: auto;
+		margin-right: 10px;
+	  }
+	}
+  }
+}

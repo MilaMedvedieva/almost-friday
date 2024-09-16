@@ -1,0 +1,127 @@
+.page-template-tp-registration {
+  
+  .package-wrap {
+	width: 100%;
+	margin: 0 auto;
+	flex-wrap: wrap;
+	@include flex(row, center, center);
+	
+	.package {
+	  max-width: 400px;
+	  width: 100%;
+	  background: $gradient_dark_grey_red;
+	  margin: 0.5rem;
+	  padding: 2rem;
+	  position: relative;
+	  color: #ffffff;
+	  min-height: 300px;
+	  @include flex(column, center, center);
+	  
+	  @include media(md) {
+		max-width: calc( (100% / 2) - 1rem );
+	  }
+	  
+	  @include media(lg) {
+		max-width: calc( (100% / 3) - 1rem );
+	  }
+	  
+	  &.active {
+		&:before {
+		  background-image: url(../images/check.png);
+		  background-position: center;
+		  background-repeat: no-repeat;
+		}
+	  }
+	  
+	  &:before {
+		content: '';
+		position: absolute;
+		top: 25px;
+		right: 25px;
+		width: 24px;
+		height: 24px;
+		background: #ffffff;
+		border-radius: 50%;
+	  }
+	  
+	  &:after {
+		content: '';
+		width: calc( 100% - 1rem );
+		height: calc( 100% - 1rem );
+		top: 0.5rem;
+		left: 0.5rem;
+		border: 1px solid #ffffff;
+		position: absolute;
+	  }
+	  
+	  .title {
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+		padding-bottom: 1rem;
+		position: relative;
+		
+		&:after {
+		  content: '';
+		  position: absolute;
+		  width: 80px;
+		  height: 1px;
+		  background: #ffffff;
+		  left: 50%;
+		  transform: translateX(-50%);
+		  bottom: 0;
+		}
+	 
+		span {
+		  font-size: 1rem;
+		  text-transform: capitalize;
+		}
+	  }
+	  .svg{
+		  svg{
+			  width: 60px;
+		  }
+
+	  }
+	  .price {
+		border-bottom: 1px solid #ffffff;
+	  }
+	  
+	  .content {
+		z-index: 10;
+		height: 120px;
+		display: block;
+		overflow-x: hidden;
+		overflow-y: scroll;
+		position: relative;
+		
+		&::-webkit-scrollbar {
+		  width: 0;
+		}
+		
+		p {
+		  font-size: 0.875rem;
+		  margin: 0.5rem 0;
+		}
+		
+		ul {
+		  list-style-type: '-';
+		  
+		  li {
+			font-size: 0.875rem;
+			margin: 0.5rem 0;
+			padding: 0 1rem;
+		  }
+		}
+	  }
+	  
+	  .link {
+		text-align: center;
+		text-decoration-line: underline;
+		text-transform: capitalize;
+		color: #FFFFFF;
+		z-index: 3;
+	  }
+	}
+	
+  }
+}

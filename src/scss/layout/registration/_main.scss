@@ -1,0 +1,102 @@
+.page-template-tp-registration {
+  
+  .main {
+	background: #ffffff;
+	padding-top: 150px;
+	min-height: auto;
+	
+	
+	.page-title {
+	  color: $c_dark;
+	  font-size: 2rem;
+	  padding-bottom: 1.5rem;
+	  margin-bottom: 1.5rem;
+	  
+	  &:after {
+		background: $c_dark;
+		
+		bottom: 0;
+	  }
+	}
+	
+	form {
+	  padding: 0 1rem;
+	  
+	  h3 {
+		text-align: center;
+		font-size: 1.125rem;
+	  }
+	  
+	  input[type=submit] {
+		margin: 0 auto;
+		cursor: pointer;
+		margin-bottom: 2rem;
+	  }
+	  
+	  .buttons-wrap {
+		@include flex(row, center, center);
+		
+		button {
+		  border: none;
+		  background: transparent;
+		  color: rgba(17, 36, 55, 0.6);
+		  text-transform: capitalize;
+		  cursor: pointer;
+		  @include flex(row, center, center);
+		  
+		  &#nextBtn {
+			svg {
+			  transform: rotate(180deg);
+			}
+		  }
+		  
+		  svg {
+			margin: 1rem;
+		  }
+		}
+	  }
+	  
+	  .points {
+		//display: none;
+		margin: 20px auto;
+		text-align: center;
+	  }
+	}
+  }
+}
+
+
+input.invalid {
+  background-color: #ffdddd;
+}
+
+.tab {
+  display: none;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: $c_dark;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+	&.active{
+		opacity: 1;
+		background-color: $c_red;
+	}
+	&.finish{
+		background-color: $c_dark;
+		opacity: 1;
+		&.active{
+			opacity: 1;
+			background-color: $c_red;
+		}
+	}
+}

@@ -1,0 +1,58 @@
+.page-template-tp-gallery {
+  
+  .main {
+	background: #ffffff;
+	padding-top: 150px;
+	
+	@include media(lg) {
+	  padding-top: 200px;
+	}
+	
+	.page-title {
+	  color: $c_dark;
+	  
+	  &:after {
+		background: $c_dark;
+	  }
+	}
+	
+	.wrapper {
+	  max-width: 1160px;
+	  margin: 0 auto;
+	  @include media(md) {
+		display: flex;
+		flex-wrap: wrap;
+	  }
+	  
+	  article {
+		padding: 1rem 0;
+	 
+		@include media(md) {
+		  margin: 1rem;
+		  width: calc( ( 100% / 2 ) - 2rem);
+		}
+	 
+		@include media(lg) {
+		  margin: 1rem;
+		  width: calc( ( 100% / 3 ) - 2rem);
+		}
+		
+		.preview {
+		  height: 200px;
+		  width: 100%;
+		  position: relative;
+		  
+		}
+		
+		h2 {
+		  font-size: 1.125rem;
+		  text-align: center;
+		  color: $c_dark;
+		  margin: 1rem 0;
+		}
+
+	  }
+	}
+  }
+  
+}

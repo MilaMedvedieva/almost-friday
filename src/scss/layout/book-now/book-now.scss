@@ -1,0 +1,52 @@
+.page-template-tp-book-now {
+
+  .main {
+    background: #ffffff;
+    padding-top: 150px;
+    min-height: auto;
+    .wrapper{
+      max-width: 780px;
+      margin: 55px auto;
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+
+    .page-title {
+      color: $c_dark;
+      font-size: 2rem;
+      padding-bottom: 1.5rem;
+      margin-bottom: 1.5rem;
+
+      &:after {
+        background: $c_dark;
+
+        bottom: 0;
+      }
+    }
+    .subtitle{
+      margin: 1rem 0;
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+  form {
+    flex-wrap: wrap;
+
+    @include media(sm) {
+      display: flex;
+    }
+
+    input{
+      border: 1px solid $c_dark;
+      padding: 1rem;
+      width: 100%;
+      margin: 0.5rem 0;
+    }
+    .button{
+      margin: 0 auto;
+      cursor: pointer;
+    }
+  }
+}

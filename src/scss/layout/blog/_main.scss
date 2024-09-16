@@ -1,0 +1,116 @@
+body.blog{
+	.main {
+		background: #ffffff;
+		padding-top: 150px;
+		@include media(lg) {
+			padding-top: 200px;
+		}
+	}
+	.page-title {
+	  color: $c_dark;
+	  &:after {
+		background: $c_dark;
+	  }
+	}
+	.wrapper {
+	  position: relative;
+	  max-width: 1200px;
+	  margin: 0 auto;
+      @include media(md) {
+		display: flex;
+		flex-wrap: wrap;
+      }
+	}
+	.article-list{
+		margin: 1rem;
+		width: calc( 100% - 2rem);
+		@include media(md) {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		article {
+			padding: 1rem 0;
+			@include media(md) {
+				margin: 1rem;
+				width: calc( ( 100% / 2 ) - 2rem);
+			}
+			@include media(lg) {
+				margin: 1rem;
+				width: calc( ( 100% / 3 ) - 2rem);
+			}
+			.preview {
+				height: 200px;
+				width: 100%;
+				position: relative;
+
+			}
+			h2 {
+				font-size: 1.125rem;
+				text-align: center;
+				color: $c_dark;
+				margin: 1rem 0;
+			}
+			p{
+				color: $c_dark;
+			}
+		}
+	}
+	 nav.pagination{
+		margin: 2rem 1rem;
+		width: calc( 100% - 2rem);
+		 text-align: center;
+		h2.screen-reader-text{
+			display: none;
+		}
+		.page-numbers:not(.dots){
+			display: inline-block;
+			transition: .3s ease-out;
+			border: 1px solid $c_grey;
+			text-align: center;
+			width: 28px;
+			height: 28px;
+			border-radius: 50%;
+			font-size: 1rem;
+			background: transparent;
+			color: $c_grey;
+			margin: 0 .3rem;
+			padding: 3px 2px;
+			@include media(md) {
+				padding: 7px 2px;
+				width: 48px;
+				height: 48px;
+				font-size: 1.5rem;
+			}
+			&:hover{
+				border-color: $c_red;
+			}
+		}
+		.page-numbers.dots{
+			padding: 3px 2px;
+			@include media(md) {
+				padding: 7px 2px;
+			}
+		}
+		span.current{
+			border-color: $c_red!important;
+			color: $c_red!important;
+		}
+		a.prev{
+			.caret{
+				transform: rotate(180deg);
+				display: inline-block;
+				position: relative;
+
+			}
+		}
+		 .caret{
+			 svg{
+				 height: 10px;
+				 @include media(md) {
+					 height: auto;
+				 }
+			 }
+
+		 }
+	}
+}

@@ -1,0 +1,68 @@
+.single-gallery {
+ 
+ .newsletter {
+   min-height: 100%;
+   padding: 2rem 0;
+   
+   .wrapper {
+     margin: 0 1rem;
+     
+	 .form-wrapper {
+       max-width: 660px;
+       margin: 0 auto;
+       border: 1px solid $c_dark;
+       border-top: 10px solid $c_dark;
+       padding: 1.5rem;
+       
+       @include media(lg) {
+         padding: 3rem 3.75rem;
+       }
+       
+       h3 {
+         font-family: $f_mak_light;
+         font-size: 2rem;
+         line-height: 28px;
+         text-align: center;
+         color:$c_dark;
+       }
+       
+       p {
+         font-size: 1.125rem;
+         text-align: center;
+         margin: 1.5rem 0;
+       }
+       
+       form {
+         max-width: 538px;
+         margin: 0 auto;
+         
+         @include media(sm) {
+           display: flex;
+         }
+  
+         input[type=email] {
+           border: 1px solid $c_dark;
+           padding: 1rem;
+           width: 100%;
+           margin: 0.5rem 0;
+           
+           @include media(sm) {
+             margin: 0;
+           }
+         }
+  
+         input[type=submit] {
+           font-family: $f_stolzl_bold;
+           border: 1px solid $c_dark;
+           background: $c_dark;
+           padding: 1rem;
+           color: #ffffff;
+           width: 100%;
+           cursor: pointer;
+           max-width: 140px;
+         }
+       }
+     }
+   }
+ }
+}

@@ -1,0 +1,29 @@
+@import 'config/typography',
+        'config/variables',
+        'config/mixins',
+        'config/global';
+
+@import 'base/buttons',
+        'base/animation';
+
+@import 'layout/header',
+        'layout/footer',
+        'layout/home/home',
+        'layout/about/about',
+        'layout/gallery/gallery',
+        'layout/online/online',
+        'layout/offline/offline',
+        'layout/contact/contact',
+        'layout/registration/registration',
+        'layout/thankyou/thankyou',
+        'layout/single/gallery/gallerys',
+        'layout/single/event/event',
+        'layout/single/type/type',
+        'layout/single/post/post',
+        'layout/default/default',
+        'layout/blog/blog',
+        'layout/book-now/book-now';
+
+@import '~slick-carousel/slick/slick';
+@import '~slick-carousel/slick/slick-theme';
+@import '~lightgallery/dist/css/lightgallery.css';

@@ -1,0 +1,75 @@
+.home {
+  
+  .work {
+	background-color: $c_grey;
+    padding: 6rem 0;
+	position: relative;
+	min-height: auto;
+	
+	.wrapper {
+	  padding: 0 1rem;
+	  max-width: 1560px;
+	  margin: 0 auto;
+	  
+	  .section-description {
+		color: #ffffff;
+		margin: 2rem auto;
+		text-align: center;
+		max-width: 510px;
+	  }
+	  
+	  .work-steps {
+		@include media(md) {
+		  display: flex;
+		  flex-wrap: wrap;
+		}
+		
+		.item {
+		  margin: 2rem 1rem;
+		  @include flex(column, center, flex-start);
+		  
+		  @include media(md) {
+			width: calc( ( 100% / 2 ) - 2rem );
+			padding: 1rem;
+		  }
+		  
+		  @include media(hd) {
+			width: calc( ( 100% / 4 ) - 2rem );
+			padding: 1rem;
+		  }
+		  
+		  span {
+			color: #FFFFFF;
+			font-size: 2rem;
+			font-family: $f_mak_light;
+			display: block;
+			margin: 1rem;
+		  }
+		  
+		  h3 {
+			font-family: $f_mak_light;
+			font-size: 1.6rem;
+			color: #ffffff;
+			text-align: center;
+			min-height: 70px;
+		  }
+		  
+		  p {
+			text-align: center;
+			letter-spacing: 0.005em;
+			color: #FFFFFF;
+			margin: 1rem 0;
+		  }
+		}
+	  }
+	  
+	  .button {
+		margin: 0 auto;
+	  }
+	  
+	  .scroll {
+		bottom: 2rem;
+	  }
+	}
+  }
+}

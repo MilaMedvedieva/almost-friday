@@ -1,0 +1,28 @@
+@keyframes scroll-bounce {
+  0%{transform:translateY(0)}
+  20%{transform:translateY(0)}
+  40%{transform:translateY(-2rem)}
+  50%{transform:translateY(0)}
+  60%{transform:translateY(-1rem)}
+  80%{transform:translateY(0)}
+  100%{transform:translateY(0)}
+}
+
+@keyframes fly {
+  0%, 50% {
+    transform: translate3d(0,0,0) scale(1);
+  }
+  60% {
+    transform: translate3d(-10px,5px,0) scale(1.05);
+  }
+  70% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(300px,-150px,0) scale(0.4);
+    opacity: 0;
+  }
+}

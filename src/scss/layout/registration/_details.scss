@@ -1,0 +1,33 @@
+.page-template-tp-registration {
+  
+  .details-wrap {
+	max-width: 670px;
+	margin: 2rem auto;
+	
+	ul {
+	  border-radius: 0 0 10px 10px;
+	  li {
+		width: 100%;
+		text-transform: capitalize;
+		font-size: 0.825rem;
+		color: rgba(17, 36, 55, 0.6);
+		@include flex(row, normal, center);
+		
+		&:not(:last-child) {
+		  border-bottom: 1px solid #C4C4C4;
+		}
+		
+		.name {
+		  width: 50%;
+		  padding: 2.5rem 4rem;
+		  background: #EDEDED;
+		}
+		.info {
+		  width: 50%;
+		  padding: 2.5rem 4rem;
+		  background: #F7F8F9;
+		}
+	  }
+	}
+  }
+}

@@ -1,0 +1,23 @@
+.page-template-tp-thankyou {
+  
+  .main {
+	@include flex(row, center, center);
+	
+	.wrapper {
+	  text-align: center;
+	  
+		h1 {
+		  color: $c_dark;
+		  margin-top: 3rem;
+		  
+		  @include media(lg) {
+			font-size: 2.8rem;
+		  }
+		  
+		  &:after {
+			background: $c_dark;
+		  }
+		}
+	}
+  }
+}

@@ -1,0 +1,169 @@
+.page-template-tp-registration {
+  
+  .calendar-wrap {
+	position: relative;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+	
+	.ui-datepicker-header {
+	  max-width: 360px;
+	  width: 100%;
+	  margin: 1rem 0;
+	  color: #333333;
+	  font-size: 2rem;
+	  font-family: $f_stolzl_light;
+	  position: relative;
+	  
+	  .ui-datepicker-prev,
+	  .ui-datepicker-next {
+		width: 20px;
+		height: 20px;
+		text-indent: 9999px;
+		cursor: pointer;
+		overflow: hidden;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		
+		&:after {
+		  content: '';
+		  position: absolute;
+		  display: block;
+		  width: 10px;
+		  height: 10px;
+		  border-left: 2px solid #333333;
+		  border-bottom: 2px solid #333333;
+		  top: 50%;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
+		}
+	  }
+	  
+	  .ui-datepicker-prev {
+		left: 12px;
+		
+		&:after {
+		  transform: translate(-50%, -50%) rotate(45deg);
+		}
+		
+	  }
+	  
+	  .ui-datepicker-next {
+		right: 12px;
+		
+		&:after {
+		  transform: translate(-50%, -50%) rotate(-135deg);
+		}
+		
+	  }
+	  
+	  .ui-datepicker-title {
+		text-align: center;
+	  }
+	}
+	
+	.ui-datepicker-calendar {
+	  width: 100%;
+	  text-align: center;
+	  thead {
+		tr {
+		  th {
+			span {
+			  display: block;
+			  color: #333333;
+			  margin: 0.5rem;
+			  font-size: 0.875rem;
+			}
+		  }
+		  
+		  td {
+			width: calc( 100% / 7 );
+		  }
+		}
+	  }
+	  
+	  .asdasd {
+		background: #00FFB2;
+		
+		span {
+		  color: #000000;
+		}
+		
+		&.ui-datepicker-unselectable{
+		  background: transparent;
+		  
+		  span {
+			color: #000000;
+		  }
+		}
+	  }
+	}
+	
+	.ui-state-default {
+	  display: block;
+	  text-decoration: none;
+	  color: #333333;
+	  line-height: 40px;
+	  font-size: 12px;
+	  border: 1px solid #E0E0E0;
+	  
+	  @include media(sm) {
+		line-height: 60px;
+	  }
+	  
+	  @include media(md) {
+		line-height: 100px;
+	  }
+	  
+	  //@include media(lg) {
+		//line-height: 120px;
+	  //}
+	  //
+	  //@include media(lg) {
+		//line-height: 140px;
+	  //}
+	  
+	  &.ui-state-active {
+		background: rgba(17, 36, 55, 0.6);
+	  }
+	  
+	  &.ui-state-highlight {
+		
+		background: rgba(0,0,0,0.02);
+	  }
+	  
+	  &:hover {
+		background: rgba(61, 75, 89, 0.5);
+	  }
+	}
+	
+	.ui-datepicker-unselectable {
+	  .ui-state-default {
+		color: #eee;
+	  }
+	}
+	
+	.designation {
+	  position: relative;
+	  margin: 1rem 0;
+	  padding-left: 3rem;
+	  
+	  @include media(md) {
+		position: absolute;
+		right: 0;
+		top: 1rem;
+	  }
+	  
+	  &:before {
+		content: '';
+		width: 20px;
+		height: 20px;
+		background: #00FFB2;
+		position: absolute;
+		left: 0;
+	  }
+	}
+  }
+}

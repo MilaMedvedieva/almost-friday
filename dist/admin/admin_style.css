@@ -1,0 +1,68 @@
+.ui-state-highlight {
+    border: 1px solid rgba(0, 255, 178, 1) !important;
+    background: rgba(0, 255, 178, 0.5) !important;
+}
+
+.ui-state-active {
+    border: 1px solid rgba(212, 204, 53, 1) !important;
+    background: rgba(212, 204, 53, 0.5) !important;
+}
+
+.ui-state-highlight a,
+.ui-state-active a {
+    color: #000000 !important;
+    font-weight: bold;
+}
+
+.ui-datepicker {
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.ui-datepicker-calendar {
+    margin: 0.5rem;
+}
+
+.ui-datepicker-prev,
+.ui-datepicker-next {
+    width: 10px;
+    height: 10px;
+    text-indent: 9999px;
+    cursor: pointer;
+    overflow: hidden;
+    position: absolute;
+    top: 50% !important;
+    transform: translateY(-50%);
+}
+
+.ui-datepicker-next:after,
+.ui-datepicker-prev:after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid #333333;
+    border-bottom: 2px solid #333333;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ui-datepicker-prev {
+    left: 12px;
+}
+
+.ui-datepicker-prev:after {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ui-datepicker-next {
+    right: 12px;
+}
+.ui-datepicker-next:after {
+     transform: translate(-50%, -50%) rotate(-135deg);
+ }
+
+

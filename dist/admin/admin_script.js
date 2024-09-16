@@ -1,0 +1,6 @@
+
+(function ($, root, undefined) {
+
+//
+
+})(jQuery);

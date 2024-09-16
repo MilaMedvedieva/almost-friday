@@ -1,0 +1,258 @@
+.single-events {
+  
+  .types {
+	border-bottom: 1px solid $c_dark;
+	min-height: auto;
+	padding-bottom: 6rem;
+	
+	.wrapper {
+	  padding: 0 1rem;
+	  max-width: 1200px;
+	  margin: 0 auto;
+	  position: relative;
+	
+	  .type-list {
+		flex-wrap: wrap;
+		@include flex(row, flex-start, center);
+	 
+		.item {
+		  width: 100%;
+		  margin: 1rem 0;
+		  max-width: 500px;
+		
+		  @include media(md) {
+			margin: 1rem 0.5rem;
+			width: calc( ( 100% / 2 ) - 1rem );
+		  }
+		
+		  @include media(xl) {
+			margin: 1rem 0.5rem;
+			width: calc( ( 100% / 3 ) - 1rem );
+		 
+			.type {
+			  &:hover {
+				background: $gradient_red;
+			 
+				.arrow {
+				  animation: none;
+				
+				  svg {
+					path {
+					  fill: #D85259;
+					}
+				  }
+				}
+			  }
+			}
+		  }
+		
+		  @include media(hd) {
+			margin: 2rem;
+			width: calc( ( 100% / 3 ) - 4rem );
+		  }
+		
+		  .type {
+			background: $gradient_gray_red;
+			position: relative;
+			transition: 1s;
+			margin: 1rem 0;
+			padding: 2rem;
+			min-height: 500px;
+			@include flex(column, center, center);
+		 
+		 
+			&:after {
+			  content: '';
+			  width: calc( 100% - 1rem );
+			  height: calc( 100% - 1rem );
+			  top: 0.5rem;
+			  left: 0.5rem;
+			  border: 1px solid #ffffff;
+			  position: absolute;
+			}
+		 
+			.wrap {
+			  width: 100%;
+			  height: 100%;
+			  z-index: 2;
+			  top: 0;
+			  left: 0;
+			  position: absolute;
+			}
+		 
+			.title {
+			  font-family: $f_mak_light;
+			  font-size: 2rem;
+			  text-align: center;
+			  text-transform: capitalize;
+			  color: #FFFFFF;
+			  margin-bottom: 2rem;
+			  padding-bottom: 2rem;
+			  position: relative;
+			
+			  &:after {
+				content: '';
+				position: absolute;
+				width: 90px;
+				height: 1px;
+				background: #ffffff;
+				left: 50%;
+				transform: translateX(-50%);
+				bottom: 0;
+			  }
+			}
+		 
+			.svg {
+			  min-height: 120px;
+			  @include flex(row, center, center);
+			}
+		 
+			.description {
+			  font-family: $f_stolzl_regular;
+			  font-size: 1.125rem;
+			  text-align: center;
+			  letter-spacing: 0.005em;
+			  margin: 1.5rem 0;
+			  color: #FFFFFF;
+			}
+		 
+			.arrow {
+			  margin: 1.5rem 0;
+			  z-index: 3;
+			  cursor: pointer;
+			  animation: scroll-bounce 1.5s infinite;
+			  @include flex(row, center, center);
+			
+			  &.active {
+				transform: rotate(180deg);
+			  }
+			
+			  svg {
+			  
+				path {
+				  fill: #3D4B59;
+				}
+			  }
+			}
+		  }
+			.packages {
+				display: none;
+				max-width: 500px;
+				margin: 0 auto;
+				&.open {
+					display: flex;
+				}
+			}
+		}
+		.packages {
+			display: flex;
+			width: 100%;
+			flex-wrap: wrap;
+			justify-content: center;
+			  transition: 1s;
+			  .package {
+				  width: 100%;
+				  background: $gradient_dark_grey_red;
+				  padding: 2rem;
+				  position: relative;
+				  color: #ffffff;
+				  margin: 1rem;
+				  flex: 0 0 100%;
+				  max-width: calc( 100% - 1rem );
+
+				  @include flex(column, center, center);
+				  @include media(md) {
+					  flex: 0 0 50%;
+					  margin: 1rem 0.5rem;
+					  max-width: calc( ( 100% / 2 ) - 1rem );
+				  }
+
+				  @include media(xl) {
+					  flex: 0 0 33.33%;
+					  margin: 1rem 0.5rem;
+					  max-width: calc( ( 100% / 3 ) - 1rem );
+				  }
+
+				  @include media(hd) {
+					  flex: 0 0 33.33%;
+					  margin: 2rem;
+					  max-width: calc( ( 100% / 3 ) - 4rem );
+				  }
+
+				  &:after {
+					  content: '';
+					  width: calc( 100% - 1rem );
+					  height: calc( 100% - 1rem );
+					  top: 0.5rem;
+					  left: 0.5rem;
+					  border: 1px solid #ffffff;
+					  position: absolute;
+				  }
+
+				  .title {
+					  font-size: 1.5rem;
+					  margin-bottom: 1rem;
+					  padding-bottom: 1rem;
+					  position: relative;
+
+					  &:after {
+						  content: '';
+						  position: absolute;
+						  width: 80px;
+						  height: 1px;
+						  background: #ffffff;
+						  left: 50%;
+						  transform: translateX(-50%);
+						  bottom: 0;
+					  }
+
+					  span {
+						  font-size: 1rem;
+						  text-transform: capitalize;
+					  }
+				  }
+				  .svg{
+					  min-height: 70px;
+					  display: flex;
+					  flex-direction: row;
+					  align-items: center;
+					  justify-content: center;
+					  svg{
+						  width: 50px;
+					  }
+				  }
+				  .price {
+					  border-bottom: 1px solid #ffffff;
+				  }
+
+				  .content {
+					  p {
+						  font-size: 0.875rem;
+						  margin: 0.5rem 0;
+					  }
+
+					  ul {
+						  padding-left: 20px;
+						  list-style-type: disc;
+
+						  li {
+							  font-size: 0.875rem;
+							  margin: 0.5rem 0;
+						  }
+					  }
+				  }
+
+				  .link {
+					  text-align: center;
+					  text-decoration-line: underline;
+					  text-transform: capitalize;
+					  color: #FFFFFF;
+					  z-index: 3;
+				  }
+			  }
+		  }
+	  }
+	
+	}
+  }
+}

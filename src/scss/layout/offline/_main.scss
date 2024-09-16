@@ -1,0 +1,91 @@
+.page-template-tp-offline {
+	.main {
+		position: relative;
+		background-size: cover;
+		overflow: hidden;
+		min-height: 60vh;
+		@include flex(column, center, flex-end);
+
+		&:after {
+			content: '';
+			position: absolute;
+			z-index: 0;
+			width: 100%;
+			height: 100%;
+			background: $gradient_dark_red;
+		}
+
+		.wrapper {
+			padding: 0 1rem;
+			z-index: 1;
+
+			h1 {
+				max-width: 38rem;
+			}
+
+			.button {
+				margin: 0 auto;
+			}
+		}
+	}
+
+	.scenes .wrapper .slider .slick-dots {
+		margin: 3rem auto !important;
+	}
+}
+
+.page-template-tpl-offline-of {
+
+	.main {
+		position: relative;
+		background-size: cover;
+		overflow: hidden;
+		@include flex(column, center, center);
+
+		&:after {
+			content: '';
+			position: absolute;
+			z-index: 0;
+			width: 100%;
+			height: 100%;
+			background: $gradient_dark_red;
+		}
+
+		.wrapper {
+			padding: 0 1rem;
+			z-index: 1;
+
+			h1 {
+				max-width: 62rem;
+			}
+
+			.button {
+				margin: 0 auto;
+			}
+
+			.scroll {
+
+				&:hover {
+					&:after {
+						opacity: 1;
+						top: -15px;
+					}
+				}
+
+				&:after {
+					content: 'How it works';
+					transform: rotate(-90deg);
+					color: #ffffff;
+					transition: 1s;
+					position: absolute;
+					width: 120px;
+					right: -35px;
+					opacity: 0;
+					top: 0;
+				}
+
+			}
+		}
+	}
+}
+

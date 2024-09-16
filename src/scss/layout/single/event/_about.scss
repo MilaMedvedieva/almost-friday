@@ -1,0 +1,142 @@
+.single-events {
+  
+  .about {
+	padding-top: 6rem;
+	background: #ffffff;
+	min-height: auto;
+	
+	.wrapper {
+	  padding: 0 1rem;
+	  max-width: 1200px;
+	  margin: 0 auto;
+	  position: relative;
+	  
+	  .info {
+		@include flex(row, center, center);
+		
+		@include media(lg) {
+		  position: absolute;
+		  top: 0;
+		  right: 0;
+		}
+		
+		p {
+		  margin: 1rem;
+		  @include flex(row, center, center);
+		  
+		  @include media(xl) {
+			margin: 0;
+		  }
+		  
+		  svg {
+			width: 35px;
+			height: 35px;
+			margin: 0 5px;
+			
+			&#duration {
+			  width: 30px;
+			  height: 30px;
+			  margin-left: 10px;
+			  margin-right: 5px;
+			}
+		  }
+		}
+	  }
+	  
+	  .section-title {
+		color: $c_dark;
+	  }
+	  
+	  .section-description {
+		color: $c_dark;
+		max-width: 1200px;
+		margin: 0 auto;
+		text-align: justify;
+	 
+		.paragraph {
+		  flex-wrap: wrap;
+		  margin: 1rem 0;
+		  @include flex(row, flex-start, center);
+		  
+		  @include media(md) {
+			margin: 2rem 0;
+		  }
+		  
+		  &.full {
+			.text {
+			  width: 100%;
+			  padding-left: 0 !important;
+			  padding-right: 0 !important;
+			}
+		  }
+		
+		  &:nth-child(even) {
+			flex-direction: row-reverse;
+			
+			.text {
+			  @include media(md) {
+				padding-left: 5rem;
+				padding-right: 0;
+			  }
+			}
+		  }
+		
+		  .text {
+		  	width: 100%;
+			margin-bottom: 1rem;
+			
+			@include media(md) {
+			  width: 60%;
+			  padding-right: 5rem;
+			}
+			
+			h3 {
+			  font-size: 1.5rem;
+			  margin: 1rem 0;
+			}
+			
+			ul {
+			  li {
+				padding-left: 20px;
+				position: relative;
+				margin: .5rem 0;
+				
+				&:after {
+				  content: "";
+				  width: 10px;
+				  height: 5px;
+				  position: absolute;
+				  left: 0;
+				  top: 5px;
+				  border-bottom: 2px solid #e65358;
+				  border-left: 2px solid #e65358;
+				  transform: rotate(-45deg);
+				}
+			  }
+			}
+		  }
+		  
+		  .image, .video {
+			width: 100%;
+			height: 200px;
+			position: relative;
+		 
+			@include media(sm) {
+			  height: 300px;
+			}
+		 
+			@include media(md) {
+			  width: 40%;
+			}
+		  }
+		  video{
+			  position: relative;
+			  width: 100%;
+			  height: 100%;
+			  object-fit: cover;
+		  }
+		}
+	  }
+	}
+  }
+}

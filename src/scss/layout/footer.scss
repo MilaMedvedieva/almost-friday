@@ -1,0 +1,329 @@
+footer {
+  width: 100%;
+  padding: 0.5rem 0;
+  background: $c_dark;
+  
+  .wrapper {
+    padding: 0 1rem;
+    position: relative;
+    
+    @include media(lg) {
+      flex-wrap: wrap;
+      @include flex(row, center, flex-start);
+    }
+    
+    .logo {
+      text-align: center;
+  
+      @include media(lg) {
+        width: 15%;
+      }
+  
+      @include media(xl) {
+        width: 30%;
+      }
+  
+      svg {
+        width: 115px;
+        height: 86px;
+  
+        path {
+          fill: #ffffff;
+        }
+      
+        @include media(hd) {
+          width: 150px;
+          height: 110px;
+        }
+      }
+    }
+    
+    .menu-wrapper {
+      margin: 0.5rem 0;
+  
+      @include media(lg) {
+        width: 70%;
+        @include flex(row, center, space-around);
+      }
+      
+      @include media(xl) {
+        width: 50%;
+      }
+      
+      .item {
+        max-width: 175px;
+        width: 100%;
+        margin: 0 auto;
+        @include flex(column, center, center);
+        
+        @include media(hd) {
+          max-width: calc( 100% / 3 );
+          &:not(:first-child) {
+            position: relative;
+            &:after {
+              content: '';
+              width: 1px;
+              height: 100px;
+              background: #ffffff;
+              position: absolute;
+              left: -25%;
+            }
+          }
+        }
+  
+        .footer-menu {
+          width: 100%;
+          text-align: center;
+          
+          @include media(lg) {
+            text-align: left;
+          }
+  
+          ul {
+            li {
+              @include media(hd) {
+                margin: 0.5rem 0;
+              }
+              
+              a {
+                font-size: 0.75rem;
+                
+                &:hover {
+                  color: $c_red;
+                }
+              }
+  
+              .sub-menu {
+                display: none;
+              }
+            }
+          }
+        }
+        
+        p,
+        a {
+          letter-spacing: 0.5em;
+          text-transform: uppercase;
+          color: #ffffff;
+          text-align: center;
+        }
+        
+        &.social {
+          margin-top: 2rem;
+          
+          @include media(hd) {
+            margin-top: 0;
+          }
+          
+          p {
+            font-size: 0.75rem;
+          }
+          
+          ul {
+            width: 100%;
+            margin: 1rem auto;
+            @include flex(row, center, center);
+            
+            @include media(lg) {
+              max-width: 170px;
+            }
+            
+            li {
+              margin: 0.5rem;
+              a {
+                svg {
+                  path {
+                    fill: #ffffff
+                  }
+                }
+                
+                &:hover {
+                  svg {
+                    path {
+                      fill: $c_red;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    .links {
+      margin: 0.5rem auto;
+      max-width: 300px;
+      @include flex(row, center, space-around);
+  
+      @include media(lg) {
+        width: 15%;
+        flex-direction: column;
+      }
+  
+      @include media(hd) {
+        width: 20%;
+        flex-direction: row;
+      }
+      
+      a {
+        color: #ffffff;
+        font-size: 0.75rem;
+        
+        &:hover {
+          color: $c_red;
+        }
+      }
+    }
+    
+    .address {
+      color: #ffffff;
+      font-size: 0.625rem;
+      font-family: $f_stolzl_light;
+    }
+  }
+}
+
+.copyright {
+  @include media(lg) {
+    @include flex(row, center, flex-end);
+  }
+  p {
+    margin-top: 1rem;
+    color: #ffffff;
+    font-family: $f_stolzl_light;
+    font-size: 0.75rem;
+    text-align: center;
+    @include media(lg) {
+      width: 50%;
+    }
+    
+    &:last-child {
+      @include media(lg) {
+        width: 25%;
+      }
+    }
+  
+    a {
+      color: #ffffff;
+      font-family: $f_stolzl_regular;
+    }
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(17, 36, 55, 0.4);
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+  padding: 1rem;
+  display: none;
+  
+  &.active {
+    @include flex(row, center, center);
+  }
+  
+  .form-wrapper {
+    max-width: 660px;
+    margin: 0 auto;
+    border: 1px solid $c_dark;
+    border-top: 10px solid $c_dark;
+    padding: 1.5rem;
+    background: #ffffff;
+    position: relative;
+    
+    @include media(lg) {
+      padding: 3rem 3.75rem;
+    }
+    
+    h3 {
+      font-family: $f_mak_light;
+      font-size: 2rem;
+      line-height: 28px;
+      text-align: center;
+      color:$c_dark;
+    }
+    
+    p {
+      font-size: 1.125rem;
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+    
+    form {
+      max-width: 538px;
+      margin: 0 auto;
+      
+      @include media(sm) {
+        display: flex;
+      }
+      
+      input{
+        border: 1px solid $c_dark;
+        padding: 1rem;
+        width: 100%;
+        margin: 0.5rem 0;
+
+        @include media(sm) {
+          margin: 0;
+        }
+      }
+      
+      input[type=submit] {
+        font-family: $f_stolzl_bold;
+        border: 1px solid $c_dark;
+        background: $c_dark;
+        padding: 1rem;
+        color: #ffffff;
+        width: 100%;
+        cursor: pointer;
+        max-width: 140px;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+    
+    .close {
+      position: absolute;
+      width: 2rem;
+      height: 2rem;
+      top: 0.5rem;
+      right: 0.5rem;
+      cursor: pointer;
+      
+      &:after, &:before {
+        content: '';
+        height: 2px;
+        width: 100%;
+        background: $c_dark;
+        position: absolute;
+        top: 50%;
+      }
+      
+      &:after {
+        transform: rotate(45deg) translateY(-50%);
+      }
+  
+      &:before {
+        transform: rotate(-45deg) translateY(-50%);
+      }
+    }
+  }
+  &.modalBookNow{
+    .form-wrapper{
+      form{
+        flex-wrap: wrap;
+      }
+      input{
+        margin: 0.3rem 0;
+      }
+      .button{
+        margin: 0 auto;
+        cursor: pointer;
+      }
+    }
+  }
+}
